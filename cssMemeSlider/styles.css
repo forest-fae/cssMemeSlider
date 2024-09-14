@@ -1,0 +1,148 @@
+
+html {
+    font-size: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: auto;
+    background-image: linear-gradient(90deg, #CCFBFF, #dae4f2);
+    background-size: cover;
+    margin:auto;
+}
+
+
+ .slider-wrap {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: 2rem;
+
+ }
+
+
+ .slider {
+    max-width: 100%;
+    max-height: 100%;
+    width: 94%;
+    height: 75vh;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #403D52;
+    padding: 3% 2% 6%;
+    gap: 4rem;
+    border: 1rem solid #403D52;
+    border-radius: 1rem;
+ }
+ 
+
+ .slides {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96%;
+    height: 60%;
+}
+
+
+ .img-wrap {
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+    width: 96%;
+ }
+    
+  .slider-image {
+    object-fit: cover;
+    width: 100%;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    opacity: 0;
+
+  }
+
+  .description-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 96%;
+    /*gap: 23em; */
+
+  }
+
+  .description {
+    color: #CCFBFF;
+    font-size: 2em;
+    overflow: hidden;
+    
+  }
+
+  p {
+    display: none;
+  }
+
+  .slide-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.2rem;
+  }
+ 
+
+ 
+ .circle {
+    height: 1.2rem;
+    background-color: #FBB18C;
+    border-radius: 100%;
+    display: inline-block;
+    border: 0.5rem solid #403D52;
+    width: 1.2rem;
+}
+
+
+.circle:active {
+background-color: #CCFBFF;
+}
+
+#s2:target ~ .slider .slider-image {
+    transform: translateX(-100%);
+}
+
+#s1 {
+    left: 0;
+}
+
+#s2 {
+    left: 100%;
+}
+
+#s3 {
+    left: 200%;
+}
+
+#s4 {
+    left: 300%;
+}
+
+#s5 {
+    left: 400%;
+}
+
+.slider-image:target {
+    left: 0;
+    opacity: 1;
+    z-index: 10;
+}
+

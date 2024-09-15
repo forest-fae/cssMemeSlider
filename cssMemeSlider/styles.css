@@ -46,7 +46,7 @@ body {
  
   .slides-screen {
     border-radius: 1rem;
-    background-color: white;
+    background-color: black;
     display: flex;
     justify-content: center;
     flex-flow: column;
@@ -204,9 +204,14 @@ body {
         font-size: 60%;
     }
 
+    .wrapper {
+        height: 100%;
+        width: 90%;
+    }
+
     .slider {
-        width: 80%;
-        height: 50%;
+        width: 90%;
+        height: 70%;
     }
 
     .slides-screen {
@@ -221,4 +226,28 @@ body {
     }
 }
 
+@media only screen and (max-width: 320px) {
+
+    html {
+        font-size: 40%;
+    }
+
+    .slider {
+        width: 70%;
+        height: 30%;
+    }
+
+    .slides-screen {
+        height: 60%;
+        width: 94%;
+    }
+
+    .description-controls {
+        display: flex;
+        flex-flow: column-reverse;
+        gap: 1.5rem;
+    }
+
+
+}
 

@@ -132,10 +132,10 @@ body {
     height: 1.2rem;
     border-radius: 100%;
     display: inline-block;
-    border: 0.5rem solid #403D52;
+    border: 0.7rem solid #403D52;
     width: 1.2rem;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .controls .circle {

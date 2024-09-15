@@ -14,7 +14,7 @@ body {
 }  
 
 
- .slider-wrap {
+ .wrapper {
     margin: auto;
     display: flex;
     align-items: center;
@@ -28,18 +28,14 @@ body {
 
 
  .slider {
-    max-width: 100%;
-    max-height: 100%;
-    width: 70%;
+    width: 80%;
     height: 80%;
-    margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     background-color: #403D52;
-   /* padding: 3% 2% 6%; */
-    gap: 4rem;
+    gap: 2rem;
     border: 1rem solid #403D52;
     border-radius: 1rem;
  }
@@ -48,60 +44,79 @@ body {
     display: none;
   }
  
+  .slides-screen {
+    border-radius: 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    height: 80%;
+    width: 94%;
+    overflow: hidden;
+    
+
+  }
 
  .slides {
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 1rem;
-    background-color: black;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 96%;
-    height: 75%;
-}
-
-
- /*.img-wrap {
-    display: block;
-    overflow: hidden;
-    max-width: 100%;
-    width: 96%;
- } */
-    
-  .img-wrap {
-    display: flex;
-    justify-content: center;
-    object-fit: contain;
-    width: 100%;
+    width: 500%;
     height: 100%;
     -moz-transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-    /*opacity: 0;*/
+}
+
+    
+  .img-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 
   }
+
+ img {
+    object-fit: contain;
+    width: 100%;
+}
+
+
 
   .description-controls {
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 96%;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
     /*gap: 23em; */
-    height: 2rem;
     overflow: hidden;
 
   }
 
-  .description {
-    color: #CCFBFF;
-    font-size: 2.4vh;
+
+  .description-wrap {
+    width: 100%;
     overflow: hidden;
-    line-height: 2rem;
+  }
+
+
+  .description {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 500%;
+    height: 100%;
+    transition: 1s;
+    overflow: hidden;
     
+  }
+
+  .meme-text {
+    color: #CCFBFF;
+    font-size: 2em;
+    width: 100%;
   }
 
 
@@ -139,5 +154,48 @@ body {
 .controls:active .circle {
     background-color:  transparent;
     border: 0.3rem solid #ff7f50;
+    
 }
+
+#s1:checked ~ .description-controls .slide-controls .controls:nth-child(1) .circle {
+    background-color: #403D52;
+}
+
+#s2:checked  ~ .description-controls .slide-controls .controls:nth-child(2) .circle {
+    background-color: #403D52;
+}
+
+#s3:checked  ~ .description-controls .slide-controls .controls:nth-child(3) .circle {
+    background-color: #403D52;
+}
+
+#s4:checked  ~ .description-controls .slide-controls .controls:nth-child(4) .circle {
+    background-color: #403D52;
+}
+
+#s5:checked  ~ .description-controls .slide-controls .controls:nth-child(5) .circle {
+    background-color: #403D52;
+}
+
+
+#s2:checked ~ .slides-screen .slides,
+#s2:checked ~ .description-controls .description-wrap .description  {
+    transform: translateX(-20%);
+}
+
+#s3:checked ~ .slides-screen .slides,
+#s3:checked ~ .description-controls .description-wrap .description {
+    transform: translateX(-40%);
+}
+
+#s4:checked ~ .slides-screen .slides,
+#s4:checked ~ .description-controls .description-wrap .description  {
+    transform: translateX(-60%);
+}
+
+#s5:checked ~ .slides-screen .slides,
+#s5:checked ~ .description-controls .description-wrap .description  {
+    transform: translateX(-80%);
+}
+
 

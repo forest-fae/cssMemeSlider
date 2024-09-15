@@ -1,0 +1,253 @@
+
+html {
+    font-size: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(90deg, #CCFBFF, #dae4f2);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}  
+
+
+ .wrapper {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: 2rem;
+    height: 90%;
+    width: 80%;
+
+ }
+
+
+ .slider {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #403D52;
+    gap: 2rem;
+    border: 1rem solid #403D52;
+    border-radius: 1rem;
+ }
+
+ input[type="radio"] {
+    display: none;
+  }
+ 
+  .slides-screen {
+    border-radius: 1rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    height: 80%;
+    width: 94%;
+    overflow: hidden;
+    
+
+  }
+
+ .slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+    
+  .img-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+  }
+
+ img {
+    object-fit: contain;
+    width: 100%;
+}
+
+
+
+  .description-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
+    /*gap: 23em; */
+    overflow: hidden;
+
+  }
+
+
+  .description-wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  .description {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 500%;
+    height: 100%;
+    transition: 1s;
+    overflow: hidden;
+    
+  }
+
+  .meme-text {
+    color: #CCFBFF;
+    font-size: 2em;
+    width: 100%;
+  }
+
+
+  .slide-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.2rem;
+  }
+ 
+
+ 
+ .controls {
+    height: 1.2rem;
+    border-radius: 100%;
+    display: inline-block;
+    border: 0.7rem solid #403D52;
+    width: 1.2rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.controls .circle {
+    background-color: #ff7f50;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    border: 0.3rem solid #ff7f50;
+}
+
+.controls:hover .circle {
+    border: 0.3em solid #CCFBFF;
+    background-color: #CCFBFF;
+}
+
+.controls:active .circle {
+    background-color:  transparent;
+    border: 0.3rem solid #ff7f50;
+    
+}
+
+#s1:checked ~ .description-controls .slide-controls .controls:nth-child(1) .circle {
+    background-color: #403D52;
+}
+
+#s2:checked  ~ .description-controls .slide-controls .controls:nth-child(2) .circle {
+    background-color: #403D52;
+}
+
+#s3:checked  ~ .description-controls .slide-controls .controls:nth-child(3) .circle {
+    background-color: #403D52;
+}
+
+#s4:checked  ~ .description-controls .slide-controls .controls:nth-child(4) .circle {
+    background-color: #403D52;
+}
+
+#s5:checked  ~ .description-controls .slide-controls .controls:nth-child(5) .circle {
+    background-color: #403D52;
+}
+
+
+#s2:checked ~ .slides-screen .slides,
+#s2:checked ~ .description-controls .description-wrap .description  {
+    transform: translateX(-20%);
+}
+
+#s3:checked ~ .slides-screen .slides,
+#s3:checked ~ .description-controls .description-wrap .description {
+    transform: translateX(-40%);
+}
+
+#s4:checked ~ .slides-screen .slides,
+#s4:checked ~ .description-controls .description-wrap .description  {
+    transform: translateX(-60%);
+}
+
+#s5:checked ~ .slides-screen .slides,
+#s5:checked ~ .description-controls .description-wrap .description  {
+    transform: translateX(-80%);
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+
+    html {
+        font-size: 60%;
+    }
+
+    .wrapper {
+        height: 100%;
+        width: 90%;
+    }
+
+    .slider {
+        width: 90%;
+        height: 70%;
+    }
+
+    .slides-screen {
+        height: 65%;
+        width: 94%;
+    }
+
+    .description-controls {
+        display: flex;
+        flex-flow: column-reverse;
+        gap: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    html {
+        font-size: 40%;
+    }
+
+    .slider {
+        width: 70%;
+        height: 30%;
+    }
+
+    .slides-screen {
+        height: 60%;
+        width: 94%;
+    }
+
+    .description-controls {
+        display: flex;
+        flex-flow: column-reverse;
+        gap: 1.5rem;
+    }
+
+
+}
+
